@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* 登入login.html */
+.container-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3D1101;
+  padding: 50px 0;
+}
+
+.container-login p, .container-login h2 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container-login p {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 35px;
+}
+
+.login {
+  width: 300px;
+  padding: 15px;
+  -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+  border-top: 3px solid #FF5E45;
+}
+
+.login h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.login label {
+  display: block;
+  margin-top: 15px;
+}
+
+.login [type='email'], .login [type='password'] {
+  width: 100%;
+  padding: 4px 0 4px 30px;
+}
+
+.login-mail,
+.login-password {
+  position: relative;
+}
+
+.far.fa-envelope,
+.fas.fa-lock {
+  position: absolute;
+  top: 50%;
+  left: 3.5%;
+  color: rgba(61, 17, 1, 0.5);
+}
+
+.login .forget {
+  font-size: 14px;
+  color: #FF5E45;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.login .forget:hover {
+  background: #FF5E45;
+  color: #FFF;
+}
+
+.login-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+}
+
+.pure-button.pure-button-register,
+.pure-button.pure-button-login {
+  font-size: 14px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  padding: 6px 48px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.pure-button.pure-button-register:hover,
+.pure-button.pure-button-login:hover {
+  opacity: 0.8;
+}
+
+.pure-button.pure-button-register {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.pure-button.pure-button-login {
+  background: #F56C23;
+}
+/*# sourceMappingURL=login.css.map */

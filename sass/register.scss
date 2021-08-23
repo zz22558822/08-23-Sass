@@ -1,0 +1,108 @@
+@import 'mixin';
+
+/* 註冊register.html*/
+
+.container-register{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #3D1101;
+	padding: 50px 0;
+    h2,>p{
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+    }
+    >p{
+        font-size: 20px;
+        margin-top: 5px;
+        margin-bottom: 35px;
+    }
+}
+.register{
+	max-width: 620px;
+	padding: 15px;
+	box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+	border-top: 4px solid #FF5E45;
+	margin: auto 20px;
+    h3{
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+.register-frame{
+	display: flex;
+	justify-content: space-between;
+    label{
+        display: block;
+    }
+    [type='email'],[type='password']{
+        width: 100%;
+        padding: 4px 0 4px 30px;
+    }
+    .register-password-re i{
+        top: 20%;
+    }
+    .have{
+        font-size: 14px;
+        color: #FF5E45;
+        transition: all 0.5s;
+        &:hover{
+            background: #FF5E45;
+            color: #FFF;
+        }
+    }
+    @include mobile-767{
+        flex-wrap: wrap;
+		justify-content: center;
+    }
+}
+.terms,
+.register-form{
+	width: 48%;
+	margin-top: 16px;
+    @include mobile-767{
+        width: 95%;
+    }
+}
+
+.terms{
+    h4,p{
+        font-size: 18px;
+    }
+    @include mobile-767{
+        margin-bottom: 30px;
+    }
+}
+.register-mail{
+	position: relative;
+    i{
+        position: absolute;
+        top: 50%;
+        left: 3.5%;
+    }
+}
+.register-password{
+    position: relative;
+    label{
+        margin-top: 15px;
+    }
+}
+.register-password-re{
+    position: relative;
+	margin-top: 12px;
+}
+.register-btn{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 30px;
+    .pure-button.pure-button-register{
+        background: #F56C23;
+    }
+    .pure-button{
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}

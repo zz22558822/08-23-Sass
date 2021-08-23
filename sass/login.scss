@@ -1,0 +1,85 @@
+@import 'mixin';
+
+/* 登入login.html */
+
+.container-login{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #3D1101;
+	padding: 50px 0;
+    p,h2{
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+    }
+    p{
+        font-size: 20px;
+        margin-top: 5px;
+        margin-bottom: 35px;
+    }
+}
+.login{
+	width: 300px;
+	padding: 15px;
+	box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+	border-top: 3px solid #FF5E45;
+    h3{
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    label{
+        display: block;
+        margin-top: 15px;
+    }
+	[type='email'],[type='password']{
+		width: 100%;
+		padding: 4px 0 4px 30px;
+	}
+}
+.login-mail,
+.login-password{
+	position: relative;
+}
+.far.fa-envelope,
+.fas.fa-lock{
+	position: absolute;
+	top: 50%;
+	left: 3.5%;
+	color: rgba(61, 17, 1, 0.5);
+}
+.login{
+	.forget{
+		font-size: 14px;
+		color: #FF5E45;
+		transition: all 0.5s;
+		&:hover{
+			background: #FF5E45;
+			color: #FFF;
+		}
+	}
+}
+
+.login-btn{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+.pure-button.pure-button-register,
+.pure-button.pure-button-login{
+	font-size: 14px;
+	color: #FFFFFF;
+	border-radius: 3px;
+	padding: 6px 48px;
+	transition: all 0.2s;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+.pure-button.pure-button-register{
+	background: rgba(0,0,0,0.35);
+}
+.pure-button.pure-button-login{
+	background: #F56C23;
+}

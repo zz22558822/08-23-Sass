@@ -1,0 +1,230 @@
+@import 'mixin';
+
+/* 全域設定 */
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    background: #efe9e7;
+    position: relative;
+    /* 隱藏多餘防止破版的list-feature-border */
+    overflow: hidden;
+    a{
+        text-decoration: none;
+    }
+}
+
+/* 表頭 */
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    padding-right: 14px;
+    width: 100%;
+    position: absolute;
+
+    h1{
+        a{
+            width: 180px;
+            height: 56px;
+            background: url(../images/logo_w.svg);
+        
+            @include text-hidden-center
+        }
+    }
+
+    @include mobile-767(){
+        position: fixed;
+		z-index: 10;
+    }
+    @include mobile-414(){
+        flex-wrap: wrap;
+		padding: 0;
+    }
+}
+
+.menu{
+    display: flex;
+	align-items: center;
+	transition: all 0.2s;
+    li{
+        a{
+            display: block;
+            color: #FFF;
+            padding: 16px;
+            transition: all 0.3s;
+            &:hover{
+                background: orange;
+                color: #000;
+            }
+        }
+    }
+    &.menu-open{
+        display: flex;
+        font-size: 24px;
+    }
+
+    @include mobile-414(){
+		display: none;
+		width: 100%;
+		text-align: center;
+    }
+    li{
+        @include mobile-414(){
+            width: 33.33333%;
+            border: 1px solid #FFF;
+        }
+    }
+}
+
+/* 漢堡選單 */
+.hamburger-menu{
+	display: none;
+    @include mobile-414(){
+        display: block;
+    }
+    a{
+        @include mobile-414(){
+            color: #FFF;
+            padding: 14px;
+        }
+    }
+}
+.fas.fa-times{
+	padding: 14px 17px;
+}
+
+
+
+/* 表尾 */
+.footer{
+    display: flex;
+	justify-content: space-around;
+	color: #3D1101;
+	line-height: 1.3em;
+	padding: 40px;
+
+    .footer-info li,
+    .footer-info li a{
+        color: #3D1101;
+        list-style: outside;
+        transition: all 0.3s;
+    }
+
+    .footer-info li a:hover{
+        color: pink;
+    }
+
+    h3{
+        font-size: 24px;
+        padding-bottom: 16px;
+    }
+    @include mobile-414{
+        display: flex;
+		flex-direction: column;
+    }
+}
+
+.footer-about,.footer-info,.footer-logo{
+	width: 30%;
+    @include mobile-767{
+        width: 45%;
+    }
+    @include mobile-414{
+        width: 90%;
+    }
+}
+.footer-about{
+    @include mobile-767{
+        display: none;
+    }
+}
+
+
+.footer-logo{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: flex-end;
+
+    > a{
+        transition: all 0.3s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    @include mobile-414{
+        margin-top: 30px;
+    }
+}
+
+.footer-sns{
+	display: flex;
+
+    li{
+        margin: 5px;
+        font-size: 20px;
+    }
+}
+
+.fa-google-plus-square{
+	color: #DB4437;
+	transition: all 0.2s;
+    &:hover{
+        transform:rotate(360deg);
+    }
+}
+
+.fa-twitter-square{
+	color: #41ABE1;
+	transition: all 0.2s;
+    &:hover{
+        transform:rotate(360deg);
+    }
+}
+
+.fa-facebook-square{
+	color: #3A5795;
+	transition: all 0.2s;
+    &:hover{
+        transform:rotate(360deg);
+    }
+}
+
+/* top按鈕 */
+.top-btn i{
+    @include top-btn($top-btn-color);
+}
+
+/* 橫幅展示區 */
+.banner{
+    background: url(../images/header_desktop.png);
+	background-position-x: 80%;
+	height: 420px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    span{
+        @include mobile-767{
+            display: block;
+        }
+    }
+}
+.banner-text{
+	color: #FFF;
+	background: rgba(0, 0, 0, 0.4);
+	text-align: center;
+	line-height: 1.5em;
+	padding: 30px 32px;
+    p{
+        padding-top: 20px;
+    }
+    h2{
+        line-height: 1.1em;
+        font-size: 36px;
+    }
+    @include mobile-414{
+        width: 95%;
+		padding: 20px 6px;
+    }
+}
+

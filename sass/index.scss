@@ -1,0 +1,218 @@
+@import 'mixin';
+
+/* 容器區 */
+/* 特色列表 */
+.list-feature{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px 0;
+	color: #3D1101;
+    h2{
+        font-size: 20px;
+        text-align: center;
+        line-height: 32px;
+        padding: 6px 12px;
+    
+        /* 使用背景以及z-index來覆蓋多於的list-feature-border */
+        background: #efe9e7;
+        z-index: 2;
+    }
+    h3{
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
+    }
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 25px;
+        li{
+            width: 25%;
+            @include mobile-767{
+                width: 70%;
+                margin-bottom: 30px;
+            }
+            > a{
+                display: flex;
+                justify-content: center;
+                margin: 10px;
+                transition: all 0.3s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        @include mobile-767{
+            flex-wrap: wrap;
+        }
+    }
+}
+/* 裝飾線條 使用絕對定位 */
+.container{
+	position: relative;
+}
+.list-feature-border{
+	position: absolute;
+	top: 90px;
+	border-top: 1px solid #979797;
+	width: 461px;
+	height: 1px;
+}
+
+/* 主廚區 */
+.Chef{
+	display: flex;
+	justify-content: space-evenly;
+	color: #FFF;
+	background: #3D1101;
+    /* 防止圖片變形 */
+    img{
+        width: 50%;
+        object-fit: cover;
+        @include mobile-767{
+            width: 100%;
+        }
+    }
+    @include mobile-767{
+        flex-wrap: wrap;
+    }
+}
+.Chef-info{
+	width: 42%;
+	padding: 80px 10px;
+    h2{
+        font-size: 20px;
+        line-height: 32px;
+        padding-bottom: 16px;
+    }
+    span{
+        font-size: 16px;
+    }
+    p{
+        line-height: 1.5em;
+    }
+    @include mobile-767{
+        width: 70%;
+    }
+}
+
+/* 感想區 */
+.opinion{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color: #3D1101;
+	padding: 50px 0;
+    h2{
+        font-size: 24px;
+    }
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 36px;
+        @include mobile-767{
+            flex-wrap: wrap;
+        }
+        li{
+            display: flex;
+            align-items: start;
+            width: 30%;
+            @include mobile-767{
+                width: 70%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    h3{
+        padding: 22px 0;
+    }
+    span{
+        display: block;
+        text-align: right;
+        padding-top: 16px;
+    }
+    img{
+        margin-right: 13px;
+    }
+}
+
+/* 地圖區 */
+.map{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #FFF;
+	padding: 50px 0;
+	color: #3D1101;
+    h2{
+        font-size: 24px;
+    }
+}
+.map-form{
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 30px;
+	width: 100%;
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 45%;
+        @include mobile-767{
+            width: 90%;
+        }
+    }
+    img{
+        width: 45%;
+        object-fit: cover;
+        @include mobile-767{
+            width: 90%;
+            margin-bottom: 30px;
+        }
+    }
+    input{
+        padding: 5px 14px;
+    }
+    @include mobile-767{
+        flex-wrap: wrap;
+    }
+    label{
+        @include mobile-767{
+            margin: 12px 0 6px;
+        }
+	}
+}
+.map-form-vegetarian .no{
+	padding-left: 36px;
+}
+.button{
+	display: flex;
+	justify-content: flex-end;
+	margin: 36px 0 0 0;
+    input{
+        padding: 6px 19px;
+        color: #FFF;
+        border-radius: 3px;
+        transition: all 0.2s;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+.pure-button.pure-button-no{
+	background: rgba(0, 0, 0, 0.35);
+	margin-bottom: 0;
+}
+.pure-button.pure-button-yes{
+	background: #F56C23;
+	margin: 0 0 0 11px;
+}
+
+/* 用圓角遮蔽背景灰色 */
+.list-feature img,.opinion img{
+	border-radius: 50%;
+}
+.lb-outerContainer .lb-container img{
+	border-radius: 50%;
+}

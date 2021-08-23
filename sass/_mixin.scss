@@ -1,0 +1,65 @@
+@mixin horizontal-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+$hover-border-color: #00cc99;
+@mixin hover-border($hover-border-color) {
+    background-image: linear-gradient($hover-border-color, $hover-border-color);
+    background-position: left bottom;
+    background-size: 0 4px;
+    background-repeat: no-repeat;
+    transition: background-size 0.18s linear;
+}
+
+@mixin text-hidden{
+    display:block;
+    text-indent:101%; /*首行縮排*/
+    overflow:hidden; /*自動隱藏超出的文字或圖片*/
+    white-space:nowrap; /*使元素在第一排上面，不斷行*/
+}
+@mixin text-hidden-center{
+    display:block;
+    text-indent:101%; /*首行縮排*/
+    overflow:hidden; /*自動隱藏超出的文字或圖片*/
+    white-space:nowrap; /*使元素在第一排上面，不斷行*/
+    background-repeat: no-repeat; /*背景不重複*/
+    background-position: center; /*背景置中*/
+}
+
+$top-btn-color: orange;
+@mixin top-btn($top-btn-color) {
+    position: fixed;
+    bottom: 3%;
+    right: 1.5%;
+    font-size: 500%;
+    color: $top-btn-color;
+    opacity: 0.6;
+    transition: all 0.5s;
+    z-index: 100;
+    &:hover{
+        color: orangered;
+        transition: all 0.5s;
+    }
+}
+
+@mixin pad-768{
+    @media(max-width:768px){
+    @content;
+    }
+}
+@mixin mobile-414{
+    @media(max-width:414px){
+        @content;
+    }
+}
+@mixin mobile-375{
+    @media(max-width:375px){
+    @content;
+    }
+}
+@mixin mobile-767{
+    @media(max-width:767px){
+        @content;
+    }
+}

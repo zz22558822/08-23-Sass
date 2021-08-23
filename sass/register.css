@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/* 註冊register.html*/
+.container-register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3D1101;
+  padding: 50px 0;
+}
+
+.container-register h2, .container-register > p {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container-register > p {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 35px;
+}
+
+.register {
+  max-width: 620px;
+  padding: 15px;
+  -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+  border-top: 4px solid #FF5E45;
+  margin: auto 20px;
+}
+
+.register h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.register-frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.register-frame label {
+  display: block;
+}
+
+.register-frame [type='email'], .register-frame [type='password'] {
+  width: 100%;
+  padding: 4px 0 4px 30px;
+}
+
+.register-frame .register-password-re i {
+  top: 20%;
+}
+
+.register-frame .have {
+  font-size: 14px;
+  color: #FF5E45;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.register-frame .have:hover {
+  background: #FF5E45;
+  color: #FFF;
+}
+
+@media (max-width: 767px) {
+  .register-frame {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.terms,
+.register-form {
+  width: 48%;
+  margin-top: 16px;
+}
+
+@media (max-width: 767px) {
+  .terms,
+  .register-form {
+    width: 95%;
+  }
+}
+
+.terms h4, .terms p {
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .terms {
+    margin-bottom: 30px;
+  }
+}
+
+.register-mail {
+  position: relative;
+}
+
+.register-mail i {
+  position: absolute;
+  top: 50%;
+  left: 3.5%;
+}
+
+.register-password {
+  position: relative;
+}
+
+.register-password label {
+  margin-top: 15px;
+}
+
+.register-password-re {
+  position: relative;
+  margin-top: 12px;
+}
+
+.register-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.register-btn .pure-button.pure-button-register {
+  background: #F56C23;
+}
+
+.register-btn .pure-button:hover {
+  opacity: 0.8;
+}
+/*# sourceMappingURL=register.css.map */
